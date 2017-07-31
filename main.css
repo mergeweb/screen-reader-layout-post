@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: lightgrey;
+    color: #fff;
+    padding: 1em 0;
+}
+
+.header__layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+}
+
+
+
+.main-navigation__list {
+    display: flex;
+    margin-right: 1em;
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.main-navigation__link {
+    color: #000;
+}
+
+
+.contain {
+    width: 95%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-gap: 5em;
+    margin-bottom: 3em;
+    /*min-height: 50vh;*/
+}
+
+
+.footer {
+    padding: 3em 0;
+    background-color: #015b46;
+    color: #fff;
+}
+
+
+/* Text meant only for screen readers. */
+.skip {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+
+    &:focus {
+        background-color: $color__background-screen;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+        clip: auto !important;
+        color: $color__text-screen;
+        display: block;
+        @include font-size(0.875);
+        font-weight: bold;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 15px 23px 14px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: 100000; /* Above WP toolbar. */
+    }
+}
+
+
+.search {
+    background-color: lightgray;
+    padding: 1em 0 3em;
+}
